@@ -41,6 +41,7 @@
             type="text"
             id="autocomplete"
             class="input-error input-xxlarge"
+            v-model="keyWord"
           />
           <button class="sui-btn btn-xlarge btn-danger" type="button" @click="goSearch">
             搜索
@@ -54,12 +55,17 @@
 <script>
 export default {
     name:'Header',
-    methods: {
-      goSearch(){
-        console.log(this)
-        //this.$router.push('/search')
+    data() {
+      return {
+        keyWord:''
       }
     },
+    methods: {
+      goSearch(){
+        this.$router.push({name:"search",params:{keyWord:this.keyWord}})
+      }
+    },
+    
 };
 </script>
 

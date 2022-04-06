@@ -1,5 +1,8 @@
 <template>
-  <div>this is search component</div>
+  <div>
+    this is search component
+    <h1>{{$route.params.keyWord}}</h1>
+  </div>
 </template>
 
 <script>
