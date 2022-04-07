@@ -1,13 +1,14 @@
 <template>
-  <div>this is home component</div>
+  <div>
+    <TypeNav />
+  </div>
 </template>
 
 <script>
 export default {
-    name:'Home'
-}
+  name: "Home",
+};
 </script>
 
 <style>
-
 </style>
